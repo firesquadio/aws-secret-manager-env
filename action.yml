@@ -1,0 +1,17 @@
+name: "Inject Secrets Manager to Env"
+description: "Injects the secrets from the specified secret manager to the environment variables"
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
+
+inputs:
+  secret:
+    required: true
+    description: "Name of the secret to pull from AWS Secrets Manager"
+  json:
+    required: false
+    description: "If true, the secret will be read and set as a JSON object"
+  name:
+    required: false
+    description: "If the object is not a JSON object, the name of the environment variable to set"

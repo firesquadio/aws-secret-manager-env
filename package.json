@@ -1,0 +1,19 @@
+{
+  "name": "aws-secret-manager-env",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:firesquadio/aws-secret-manager-env.git",
+  "author": "Nahuel Veron <nahuelav96@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build index.ts"
+  },
+  "dependencies": {
+    "@actions/core": "^1.8.2",
+    "@aws-sdk/client-secrets-manager": "^3.100.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0",
+    "typescript": "^4.7.2"
+  }
+}
