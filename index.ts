@@ -33,7 +33,7 @@ const PopulateToEnv =  async (secretValue: string) => {
       const jsonSecret = JSON.parse(secretValue)
       Object.keys(jsonSecret).forEach(key => {
         core.exportVariable(key, jsonSecret[key])
-        core.setSecret(key)
+        core.setSecret(jsonSecret[key])
       })
       
       return
