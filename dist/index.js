@@ -19243,7 +19243,7 @@ const PopulateToEnv = async (secretValue) => {
             const jsonSecret = JSON.parse(secretValue);
             Object.keys(jsonSecret).forEach(key => {
                 _actions_core__WEBPACK_IMPORTED_MODULE_0__.exportVariable(key, jsonSecret[key]);
-                _actions_core__WEBPACK_IMPORTED_MODULE_0__.setSecret(key);
+                _actions_core__WEBPACK_IMPORTED_MODULE_0__.setSecret(jsonSecret[key]);
             });
             return;
         }

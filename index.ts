@@ -46,7 +46,7 @@ const PopulateToEnv =  async (secretValue: string) => {
   }
   
   core.exportVariable(name, secretValue)
-  core.setSecret(name)
+  core.setSecret(secretValue)
   core.endGroup()
   return
 }
